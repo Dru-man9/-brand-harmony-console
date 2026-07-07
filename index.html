@@ -1136,7 +1136,7 @@ function buildBrandDataBlock(name, website, notes){
 async function analyzeBrandViaClaude(name, website, notes){
   const userPrompt = buildBrandDataBlock(name, website, notes);
 
-  const usingKey = ANTHROPIC_API_KEY.startsWith('PASTE_YOUR_KEY_HERE
+  const usingKey = ANTHROPIC_API_KEY.startsWith('sk-ant');
   const url      = usingKey ? "https://api.anthropic.com/v1/messages" : "/api/analyze";
   const headers  = { "Content-Type": "application/json" };
   if(usingKey){
