@@ -1154,8 +1154,7 @@ async function analyzeBrandViaClaude(name, website, notes){
       system: brandHarmonySystemPrompt(),
       messages: [{ role: "user", content: userPrompt }],
       // claude-sonnet-4-6 requires web_search_20260209 + beta header
-      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 }],
-      betas: ["code-execution-web-tools-2026-02-09"]
+      tools: [{ type: "web_search_20260209", name: "web_search", max_uses: 3 }]
     })
   });
 
